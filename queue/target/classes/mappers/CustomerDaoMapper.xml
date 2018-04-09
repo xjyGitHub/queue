@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="dao.CustomerDao">
+	
+	<!-- 删除单个信息 -->
+	<insert id="addOne" parameterType="entity.Customer">
+		insert into customer(telephone,desktype,queueNum,queueDate,status) values(#{telephone},#{desktype},#{queueNum},#{queueDate},#{status})
+	</insert>
+	
+	
+	<select id="findOne" parameterType="map" resultType="entity.Customer">
+		select * from customer 
+		<where>
+			1=1
+			<if test="telephone != null">
+				and telephone = #{telephone}
+			</if> 
+			<if test="desktype != null">
+				and desktype = #{desktype}
+			</if>
+			<if test="queueDate != null">
+				and queueDate between(#{startDate},#{endDate})				
+			</if>	
+			<if test="queueNum != null">
+				and queueNum = #{queueNum}
+			</if>		
+		</where>
+	</select>
+	
+	<select id="getWaitNum" resultType="int">
+		select count(id) from customer where desktype=#{desktype} and status=1 and queueDate &lt; #{queueDate}	
+	</select>
+	
+	<update id="updateStatus" parameterType="map">
+		update customer set status = #{status} where telephone=#{telephone}
+	</update>
+	
+	<select id="getDeskNum" resultType="entity.Desktype">
+		select * from desktype
+	</select>
+	
+	<update id="updateNum" parameterType="int">
+		update desktype set freeDeskNum = #{freeDeskNum}
+	</update>
+	
+	
+</mapper>
+
+
+
+
+
+
+

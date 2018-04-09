@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/* 登录表单--开始 */
+.form-signin {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.form-signin .form-signin-heading {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #2e6da4;
+}
+
+.form-signin .jumbotron {
+	padding: 5px 20px 20px 20px;
+	box-shadow: 5px 5px 5px #222;
+	background: white !important;
+}
+
+.form-signin .glyphicon-user,.form-signin .glyphicon-lock,.form-signin .glyphicon-credit-card
+	{
+	color: #2e6da4;
+}
+
+.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+	color: #2e6da4;
+}
+
+.form-signin .form-control {
+	position: relative;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+}

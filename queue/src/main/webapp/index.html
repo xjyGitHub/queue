@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>登陆界面</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<link href="css/login.css" rel="stylesheet" />
+<style type="text/css">
+div#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+div #bg>img {
+	height: 100%;
+	width: 100%;
+	border: 0;
+}
+
+.msg {
+	font-size: 16px;
+	color: red;
+}
+</style>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/cookie_util.js"></script>
+
+</head>
+<body>
+	<div id="bg">
+		<img src="image/bluebg.jpg" style="width: 100%; height: 100%" />
+	</div>
+	<div class="container">
+		<form class="form-signin" id="loginForm" name="login" method="post"
+			action="#">
+			<div class="jumbotron">
+				<h3 class="form-signin-heading">欢迎登录美味不用等平台</h3>
+				<div class="form-group " id="account-div">
+					<div class="input-group">
+						<span class="input-group-addon" id=""> <span
+							class="glyphicon glyphicon-user"> </span>
+						</span> <input class="form-control" id="account" name="account"
+							placeholder="请输入您的账号" type="text" value="" />
+					</div>
+					<span id="account_msg" class="hidden msg"> </span>
+				</div>
+				<div class="form-group" id="password-div">
+					<div class="input-group">
+						<span class="input-group-addon" id=""> <span
+							class="glyphicon glyphicon-lock"> </span>
+						</span> <input class="form-control" id="password" name="password"
+							placeholder="请输入您的密码" type="password" value="" /> <span
+							class="input-group-addon" id="eye-open-close" onclick="eyeOpen()">
+							<span class="glyphicon glyphicon-eye-close"></span>
+						</span>
+					</div>
+					<span id="password_msg" class="hidden msg"> </span>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"> <span
+							class="glyphicon glyphicon-credit-card"> </span>
+						</span> <select class="form-control" id="permission" name="permission">
+							<option value="0">请选择身份</option>
+							<option value="1">管理员</option>
+							<option value="2">服务员</option>
+						</select>
+					</div>
+					<span id="permission_msg" class="hidden msg"> </span>
+				</div>
+				<div class="checkbox">
+					<label> <input type="checkbox" value="remember-me" /> 记住我
+					</label>
+				</div>
+				<div>
+					<button class="btn btn-primary form-control" type="button"
+						id="login_button">登录</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="js/jquery-1.11.3.min.js">
+		
+	</script>
+	<script src="js/bootstrap.min.js">
+		
+	</script>
+	<script src="js/index.js">
+		
+	</script>
+	<script type="text/javascript">
+		var winHeight = $(window).height();
+		var h = 4;
+		$(".form-signin").css("padding-top", winHeight / 4 + "px");
+		window.onresize = function() {
+			winHeight = $(window).height();
+			h = 4;
+			if (winHeight < 600) {
+				h = 6;
+			} else if (winHeight < 400) {
+				h = 9;
+			}
+			$(".form-signin").css("padding-top", winHeight / h + "px");
+		};
+	</script>
+</body>
+</html>

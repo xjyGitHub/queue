@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	/* 火狐浏览器固定滚动条 */
+	overflow: -moz-scrollbars-vertical;
+}
+
+body {
+	background: #fff;
+	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei,
+		Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+
+.panel-body-item-content th,.panel-body-item-content td {
+	text-align: center;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+/* 页面顶部内容 */
+.welcome {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px;
+	background: #fff;
+	/* color: #000;
+    background: #e7e7e7;
+    背景渐变
+    background: -o-linear-gradient(top, #666, #222);
+    background: linear-gradient(top, #666, #222);
+    火狐
+    background: -moz-linear-gradient(top, #666, #222);
+    谷歌、搜狗、Edge、UC
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666), to(#222));
+    谷歌、搜狗、UC
+    background: -webkit-linear-gradient(top, #666, #222);
+    IE
+    background: -ms-linear-gradient(top, #666, #222);
+    filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#666, endColorstr=#222);
+    #666, #222 */
+}
+
+.datetime {
+	color: #fff;
+}
+
+.welcomeUser {
+	float: right;
+	color: #222;
+}
+
+.loginUser {
+	float: right;
+	margin-left: 20px;
+}
+
+/* 导航条 */
+.navbar {
+	border-bottom: 1px solid #bbb;
+	background-image: url(../image/nav-bg.jpg);
+}
+
+.nav,.dropdown-menu {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.navbar .navbar-brand {
+	font-family: STCaiyun;
+	font-size: 28px;
+	/* color: #563d7c; */
+	color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+	/* color: #563d7c; */
+	color: #fff;
+}
+
+.dropdown-menu>li>a {
+	color: #563d7c;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	background: #e7e7e7;
+}
+
+.navbar .navbar-brand:hover {
+	color: #3399CC;
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+	transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+/* 巨幕、页面说明 */
+.jumbotron {
+	color: #fff;
+	background-image: url(../image/jxt-bg.jpg);
+	box-shadow: 5px 5px 5px #888;
+	/* border: 1px solid #777; */
+}
+
+.jumbotron h1 {
+	font-size: 32px;
+	padding: 0;
+}
+
+.jumbotron h4 {
+	font-size: 16px;
+	padding: 0;
+}
+
+.thumbnail {
+	box-shadow: 5px 5px 5px #888;
+}
+/* main */
+.main {
+	margin-top: 65px;
+}
+/* 路径导航 */
+.breadcrumb {
+	margin-bottom: 1px;
+	border-bottom: 1px solid #aaa;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/* 页面内主体 */
+.panel {
+	border: 1px solid #aaa;
+	box-shadow: 5px 5px 5px #888;
+}
+
+.panel-body {
+	padding-top: 0px;
+}
+
+.panel-body-item-content {
+	margin-left: 10px;
+}
+
+.panel-body-item-heading {
+	margin-top: 8px;
+	color: #3366cc;
+}
+
+.panel-body-item h4 {
+	color: #3369FF;
+}
+
+.carousel {
+	box-shadow: 5px 5px 5px #888;
+	background: #eee;
+}
+
+.nav-pills {
+	text-align: center;
+	background: #fff;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px #888;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+.hr-line {
+	margin-top: 0px;
+	border: 0;
+	background-color: gray;
+	height: 1px;
+}
+
+#myIframe {
+	width: 100%;
+	height: 300px;
+}
+
+.input-group {
+	width: 100%;
+}
+
+/* .panel-body-item-content .input-group-addon {
+    color: red;
+    width: 30%;
+} */
+.modal-body .input-group-addon {
+	text-align: center;
+	width: 28%;
+}
+
+/* 轮播区域 */
+.carousel-inner img {
+	margin: 0 auto;
+}
+
+#footer {
+	/* 背景渐变 */
+	background: -o-linear-gradient(top, #63A4D0, #0F0FCE);
+	background: linear-gradient(top, #63A4D0, #0F0FCE);
+	/* 火狐 */
+	background: -moz-linear-gradient(top, #63A4D0, #0F0FCE);
+	/* 谷歌、搜狗、Edge、UC */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#63A4D0),
+		to(#0F0FCE));
+	/* 谷歌、搜狗、UC */
+	background: -webkit-linear-gradient(top, #63A4D0, #0F0FCE);
+	/* IE */
+	background: -ms-linear-gradient(top, #63A4D0, #0F0FCE);
+	filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0,
+		startColorstr=#63A4D0, endColorstr=#0F0FCE);
+	border-top: 1px solid #ccc;
+	/*border-bottom: 1px solid #222;*/
+	padding: 15px 0 10px 0;
+	color: #fff;
+	text-align: center;
+}
+
+/* 右下角的固定按钮样式 */
+.fixed-btn {
+	position: fixed;
+	right: 0px;
+	bottom: 20px;
+	width: 70px;
+	z-index: 530;
+}
+
+.form-inline .form-group {
+	margin-bottom: 5px;
+	/*background: red;*/
+}
+
+/*================================================================*/

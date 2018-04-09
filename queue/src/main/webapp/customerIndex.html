@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>顾客取号</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<link href="css/login.css" rel="stylesheet" />
+<style type="text/css">
+div#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+div #bg>img {
+	height: 100%;
+	width: 100%;
+	border: 0;
+}
+
+.msg {
+	font-size: 16px;
+	color: red;
+}
+</style>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/cookie_util.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<img src="image/bg.jpg" style="width: 100%; height: 100%" />
+	</div>
+	<div class="container">
+		<form class="form-signin" name="login" method="post" action="#">
+			<div class="jumbotron">
+				<h3 class="form-signin-heading">请输入以下信息，然后取号</h3>
+				<div class="form-group " id="account-div">
+					<div class="input-group">
+						<span class="input-group-addon" id=""> <span
+							class="glyphicon glyphicon-earphone"> </span>
+						</span> <input class="form-control" id="telephone" name="telephone"
+							placeholder="请输入您的手机号" type="text" value="" />
+					</div>
+					<span id="telephone_msg" class="hidden msg"> </span>
+
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"> <span
+							class="glyphicon glyphicon-cutlery"> </span>
+						</span> <select class="form-control" id="desk_type" name="desk_type">
+							<option value="0">请选择桌位类型</option>
+							<option value="A">小桌（1-2人）</option>
+							<option value="B">中桌（3-4人）</option>
+							<option value="C">大桌（5-8人）</option>
+						</select>
+					</div>
+					<span id="desk_type_msg" class="hidden msg"> </span>
+				</div>
+				
+				<div id="deskNumDiv" class="fordm-group" >
+					<label>桌位号：</label><span id="deskNum"></span>
+				</div>
+				
+				<div id="waitNumDiv" class="fordm-group" >
+					<label>目前需要等待人数：</label><span id="waitNum"></span>
+				</div>
+				
+				<div>
+					<button class="btn btn-danger form-control" type="button"
+						id="get_order_num_button">取号</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="js/jquery-1.11.3.min.js">
+		
+	</script>
+
+	<script src="js/bootstrap.min.js">
+		
+	</script>
+
+	<script src="js/customerIndex.js">
+		
+	</script>
+	<script type="text/javascript">
+		var winHeight = $(window).height();
+		var h = 4;
+		$(".form-signin").css("padding-top", winHeight / 4 + "px");
+		window.onresize = function() {
+			winHeight = $(window).height();
+			h = 4;
+			if (winHeight < 600) {
+				h = 6;
+			} else if (winHeight < 400) {
+				h = 9;
+			}
+			$(".form-signin").css("padding-top", winHeight / h + "px");
+		};
+	</script>
+</body>
+</html>
